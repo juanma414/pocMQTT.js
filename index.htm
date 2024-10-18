@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba MQTT.js</title>
+</head>
+<body>
+    <h1>Prueba de MQTT.js</h1>
+    <div>
+        <label for="topic">Tópico:</label>
+        <input type="text" id="topic" />
+    </div>
+    <div>
+        <label for="message">Mensaje:</label>
+        <input type="text" id="message" />
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+    <div>
+        <label for="newTopic">Nuevo Tópico:</label>
+        <input type="text" id="newTopic" />
+        <button onclick="subscribeToNewTopic()">Suscribirse</button>
+    </div>
+    <div>
+        <label for="unsubscribeTopic">Desuscribirse del Tópico:</label>
+        <input type="text" id="unsubscribeTopic" />
+        <button onclick="unsubscribeFromTopic()">Desuscribirse</button>
+    </div>
+    <div>
+        <h2>Mensajes recibidos:</h2>
+        <ul id="messages"></ul>
+    </div>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
