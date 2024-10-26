@@ -25,10 +25,13 @@
         <label for="unsubscribeTopic">Desuscribirse del Tópico:</label>
         <input type="text" id="unsubscribeTopic" />
         <button onclick="unsubscribeFromTopic()">Desuscribirse</button>
+        
     </div>
     <div>
         <h2>Mensajes recibidos:</h2>
+        <button onclick="clearMessages()">Borrar Lista</button> <!-- Botón para borrar la lista -->
         <ul id="messages"></ul>
+        
     </div>
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <script src="app.js"></script>

@@ -4,9 +4,9 @@ const client = mqtt.connect('wss://test.mosquitto.org:8081');
 // Suscribirse al tópico inicial
 client.on('connect', () => {
     console.log('Conectado al broker MQTT');
-    client.subscribe('test/topic', (err) => {
+    client.subscribe('dswTest', (err) => {
         if (!err) {
-            console.log('Suscrito al tópico test/topic');
+            console.log('Suscrito al tópico dswTest');
         }
     });
 });
@@ -44,4 +44,10 @@ function unsubscribeFromTopic() {
             console.log(`Desuscrito del tópico ${unsubscribeTopic}`);
         }
     });
+}
+
+// Borrar la lista de mensajes
+function clearMessages() {
+    const msgList = document.getElementById('messages');
+    msgList.innerHTML = '';
 }
